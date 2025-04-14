@@ -1,0 +1,88 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #fffafa;
+    color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f9d6ea;
+    text-align: center;
+    padding: 2rem;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #d48cac;
+}
+
+h2 {
+    color: #a89ca1;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+#profile {
+    text-align: center;
+    background-color: #fce4ec;
+    border-bottom: 2px dashed #e1bfd1;
+    animation: fadeln 2s ease-in;
+}
+
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #d48cac;
+    box-shadow: 0 0 20px #f8bbd0;
+    transition: transform 0.3s ease ;
+}
+
+#profile-pic hover {
+    transform: scale (1.05) rotate(2deg);
+}
+
+#gameCanvas {
+    border: 2px solid #d3d3d3;
+    background-color: #ffffff;
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 1rem;
+    color: #888;
+}
+
+.star {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: transparent;
+    z-index: 999;
+}
+
+.star::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+    10px 20px #fff, 50px 80px #ffeefc, 90px 40px #ffd6f0,
+    120px 100px #ffe4ec, 160px 60px #fff0f5;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes fadeln {
+    0%, 100% {opacity: 0.6;}
+    50% {opacity: 1;}
+}
